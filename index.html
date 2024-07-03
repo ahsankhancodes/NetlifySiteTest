@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="visaForm" onsubmit="saveFormData(event)">
+            <h2>Visa Application Form</h2>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="repeatEmail">Repeat Email</label>
+            <input type="email" id="repeatEmail" name="repeatEmail" required>
+
+            <label for="passportNumber">Passport Number <span class="mandatory">*</span></label>
+            <input type="text" id="passportNumber" name="passportNumber" required>
+
+            <label for="citizenship">Citizenship <span class="mandatory">*</span></label>
+            <select id="citizenship" name="citizenship" required>
+                <option value="">Select your citizenship</option>
+                <option value="Pakistanisch/Pakistani">Pakistanisch/Pakistani</option>
+                <option value="Afghanisch/Afghan">Afghanisch/Afghan</option>
+                <option value="Sonstige/Others">Sonstige/Others</option>
+            </select>
+
+            <label for="telephoneNumber">Telephone Number <span class="mandatory">*</span></label>
+            <input type="tel" id="telephoneNumber" name="telephoneNumber" required>
+
+            <label for="visaCategory">Visa Category for Study Purposes <span class="mandatory">*</span></label>
+            <select id="visaCategory" name="visaCategory" required>
+                <option value="">Select your visa category</option>
+                <option value="Recipient of a full scholarship paid by an offical German academic institution (e.g. DAAD or AvH)">
+                    Recipient of a full scholarship paid by an offical German academic institution (e.g. DAAD or AvH)
+                </option>
+                <option value="Phd student holding an admission letter from a german university">
+                    Phd student holding an admission letter from a german university
+                </option>
+                <option value="Master students holding an unconditional direct admission letter from a German University valid for winter semesters 2024/2025">
+                    Master students holding an unconditional direct admission letter from a German University valid for winter semesters 2024/2025
+                </option>
+                <option value="Bachelors students holding an unconditional direct admission letter from a German University valid for winter semesters 2024/2025">
+                    Bachelors students holding an unconditional direct admission letter from a German University valid for winter semesters 2024/2025
+                </option>
+                <option value="Study preparation (e.g. language course followed by a foundation course)">
+                    Study preparation (e.g. language course followed by a foundation course)
+                </option>
+                <option value="Language courses for purposes other than study">
+                    Language courses for purposes other than study
+                </option>
+            </select>
+
+            <div class="buttons">
+                <button type="button" onclick="document.getElementById('visaForm').reset();">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
